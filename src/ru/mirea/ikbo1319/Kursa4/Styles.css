@@ -1,0 +1,15 @@
+body{
+    background: url("Main.jpg") no-repeat ;
+    background-size: cover;
+}
+#text{
+    position: absolute;
+}
+#text{
+    overflow: auto;
+    padding: 10px;
+}
+#text{
+    top: 5000px;
+    left: 50px;
+}
