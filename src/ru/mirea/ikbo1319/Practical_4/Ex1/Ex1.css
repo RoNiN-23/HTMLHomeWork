@@ -1,0 +1,63 @@
+one:after {
+    content: '\2018';
+}
+
+one:before {
+    content: '\2019';
+}
+
+two:after {
+    content: '\201A';
+}
+
+two:before {
+    content: '\201A';
+}
+
+three:after {
+    content: '\201C';
+}
+
+three:before {
+    content: '\201D';
+}
+
+four:after {
+    content: '\201E';
+}
+
+four:before {
+    content: '\201E';
+}
+
+five:after {
+    content: '\00BB';
+}
+
+five:before {
+    content: '\00AB';
+}
+
+one{
+    color: deeppink;
+    font-family: Dialog;
+}
+two{
+    color: chartreuse;
+    font-family: sans-serif;
+}
+three{
+    color: red;
+    font-family: "Agency FB";
+}
+four{
+    color: blue;
+    font-family: "Bodoni MT";
+}
+five{
+    color: cyan;
+    font-family: "Century Gothic";
+}
+body{
+    font-size: 300%;
+}

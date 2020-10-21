@@ -1,0 +1,31 @@
+.block1 {
+    color: white;
+    background-color: black;
+    font-family: Dialog;
+    font-size: 203.5%;
+    position: absolute;
+    top: 45%;
+    right: 50%;
+}
+
+.block2 {
+    color: red;
+    background-color: slategrey;
+    font-family: sans-serif;
+    font-size: 200%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+
+.block3 {
+    color: grey;
+    background-color: gainsboro;
+    font-family: "Arial Unicode MS";
+    font-size: 200%;
+    position: absolute;
+    top: 55%;
+    right: 50%;
+
+
+}

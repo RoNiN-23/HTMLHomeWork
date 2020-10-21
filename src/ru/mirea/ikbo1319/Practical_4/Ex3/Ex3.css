@@ -1,0 +1,7 @@
+.brd{
+    border: 1px solid black;
+}
+tr:hover{
+    background-color: pink;
+    transition: 0.5s;
+}

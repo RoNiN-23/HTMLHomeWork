@@ -1,0 +1,21 @@
+body{
+font-size: 120%;
+    font-family: sans-serif;
+    position: absolute;
+    right: 7%;
+    left: 7%;
+    background-color: dimgrey;
+    color: white;
+text-align: justify;
+}
+h1{
+    font-size: 175%;
+    font-family: sans-serif;
+}
+h2{
+    font-size: 145%;
+    font-family: sans-serif;
+}
+a{
+    text-decoration-line: none;
+}

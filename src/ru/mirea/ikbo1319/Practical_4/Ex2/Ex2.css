@@ -1,0 +1,19 @@
+one-I {
+    text-decoration: underline;
+    text-decoration-color: deeppink;
+}
+
+two-I {
+    text-decoration: overline;
+    text-decoration-color: blueviolet;
+}
+
+three-I {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+four-I {
+    text-decoration: overline;
+    text-decoration-color: cyan;
+}

@@ -1,0 +1,11 @@
+.square {
+    border: 5px solid red;
+    margin: auto;
+    text-align: center;
+    width: 50vw;
+    height: 50vw;
+}
+.content {
+    font-size: 2em;
+    padding-top: 20%;
+}

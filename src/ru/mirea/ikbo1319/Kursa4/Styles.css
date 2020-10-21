@@ -1,15 +1,19 @@
 body{
-    background: url("Main.jpg") no-repeat ;
-    background-size: cover;
+   background-color: white;
+    margin: 0;
 }
-#text{
+
+.menu{
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 30%;
+    font-family: Dialog;
+    font-size: 35px;
+    color: white;
+}
+contact{
     position: absolute;
-}
-#text{
-    overflow: auto;
-    padding: 10px;
-}
-#text{
-    top: 5000px;
-    left: 50px;
+    left: 50%
 }

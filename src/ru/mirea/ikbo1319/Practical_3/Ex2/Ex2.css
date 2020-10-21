@@ -1,0 +1,15 @@
+img{
+    box-shadow: 10px 10px 10px rgba(0,0,0,1   ),-10px 10px 10px rgba(255,0,0,1),10px -10px 10px rgba(0,255,0,1),-10px -10px 10px rgba(0,0,255,1  ) ;
+}
+img:hover{
+    box-shadow: 10px 10px 10px rgba(255,0,0,1   ),-10px 10px 10px rgba(0,255,0,1),10px -10px 10px rgba(0,0,255,1),-10px -10px 10px rgba(0,0,0,1  ) ;
+    transition: box-shadow 1s;
+
+}
+div{
+    background-color: dimgrey;
+    box-shadow: 10px 10px 10px rgba(0,0,0,1   );
+    padding: 50px;
+    color: white;
+}
+

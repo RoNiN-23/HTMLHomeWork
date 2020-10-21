@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        2.7
+    </title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Смирнов Егор Олегович</h1>
+<canvas id = "canvas" height = "500" width = "1000"></canvas>
+
+<script>
+    var canvas = document.getElementById("canvas");
+    var rect1 = canvas.getContext("2d");
+    var rect2 = canvas.getContext("2d");
+    var circ1 = canvas.getContext("2d");
+    var circ2 = canvas.getContext("2d");
+    var tr1 = canvas.getContext("2d");
+    var tr2 = canvas.getContext("2d");
+
+    rect1.fillStyle = "blue";
+    rect1.fillRect(10, 10, 150, 100);
+    rect1.fillStyle = "pink";
+    rect2.fillRect(20, 20, 130, 80);
+
+    circ2.beginPath();
+    circ2.arc(250, 60, 50, 0, 6.28);
+    circ1.fillStyle = "yellow";
+    circ1.fill();
+    circ2.stroke();
+
+    circ1.beginPath();
+    circ1.arc(250, 60, 35, 0, 6.28);
+    circ1.fillStyle = "gray";
+    circ1.fill();
+    circ1.stroke();
+
+    tr1.beginPath();
+    tr1.moveTo(400, 10);
+    tr1.lineTo(450, 100);
+    tr1.lineTo(350, 100);
+    tr1.lineTo(400, 10);
+    tr1.fillStyle = "red";
+    tr1.fill();
+    tr1.stroke();
+
+    tr2.beginPath();
+    tr2.moveTo(400, 30);
+    tr2.lineTo(430, 90);
+    tr2.lineTo(370, 90);
+    tr2.lineTo(400, 30);
+    tr2.fillStyle = "green";
+    tr2.fill();
+    tr2.stroke();
+</script>
+</body>
