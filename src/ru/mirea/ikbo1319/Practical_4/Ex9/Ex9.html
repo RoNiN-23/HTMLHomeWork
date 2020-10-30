@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.9</title>
+    <style>
+        .container {
+            width: 100px;
+            height: 50px;
+            margin: 100px;
+            transform-style: preserve-3d;
+            transition: transform 1s linear;
+        }
+
+
+        .side {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+        }
+
+
+        .front {
+            border: 1px solid black;
+            transform: translateZ(25px);
+            background: gold;
+        }
+
+        .bottom {
+            border: 1px solid black;
+            transform: translateY(25px) rotateX(-90deg);
+            background: skyblue;
+        }
+
+
+        .container:hover {
+            transform: rotateX(90deg);
+        }
+        p{
+            margin-top: 7px;
+
+            padding-left:25px ;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="bottom side" ><p>Вторая сторона</p></div>
+    <div class="front side" ><p>Первая сторона</p></div>
+</div>
+</body>
+</html>
