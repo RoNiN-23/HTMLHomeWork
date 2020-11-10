@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            height: 50px;
+            background-color: #ff7f00;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            background-color: #ff7f00;
+            float: left;
+            height: 50px;
+            width: 250px;
+            position: relative;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        nav li .second {
+            display: none;
+            position: absolute;
+            top: 100%;
+        }
+
+        nav li:hover {
+            background-color: #f65500;
+        }
+
+        nav li:hover .second {
+            display: block;
+        }
+
+        nav li li {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Пункт 1</a>
+            <ul class="second">
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Пункт 2</a>
+            <ul class="second">
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Пункт 3</a>
+            <ul class="second">
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Пункт 4</a>
+            <ul class="second">
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

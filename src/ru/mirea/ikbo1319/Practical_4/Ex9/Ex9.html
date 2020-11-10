@@ -10,6 +10,7 @@
             margin: 100px;
             transform-style: preserve-3d;
             transition: transform 1s linear;
+            float: left;
         }
 
 
@@ -23,30 +24,68 @@
         .front {
             border: 1px solid black;
             transform: translateZ(25px);
-            background: gold;
+            background: linear-gradient(to right, orangered, greenyellow);
+            box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 1);
+            color: #ffffff;
         }
 
         .bottom {
             border: 1px solid black;
             transform: translateY(25px) rotateX(-90deg);
-            background: skyblue;
+            background: linear-gradient(to top left, dodgerblue, deeppink);
+            box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 1);
+            color: #ffffff;
         }
 
 
         .container:hover {
             transform: rotateX(90deg);
         }
-        p{
-            margin-top: 7px;
 
-            padding-left:25px ;
+        p {
+            margin-top: 7px;
+            padding-left: 25px;
         }
+
+        .button {
+            width: 100px;
+            height: 35px;
+            box-shadow: inset 0px 0px 7px 1px rgba(1, 0, 0, 0.5);
+            float: left;
+            margin: 100px;
+        }
+
+        .but1 {
+            background: linear-gradient(to top left, blueviolet, hotpink);
+            color: #000000;
+            padding-top: 17px;
+        }
+
+        .but2 {
+            background: linear-gradient(to top left, purple, blue);
+            color: #ffffff;
+            padding-top: 17px;
+        }
+
+
+        .but1:hover {
+            background: linear-gradient(to top left, violet, wheat);
+        }
+        .but2:hover{
+            transform: rotateX(360deg);
+            transition: transform 5s linear;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="bottom side" ><p>Вторая сторона</p></div>
-    <div class="front side" ><p>Первая сторона</p></div>
+    <div class="bottom side"><p>Вторая сторона</p></div>
+    <div class="front side"><p>Первая сторона</p></div>
 </div>
+
+
+<div class="tr1"><div class="but1 button" , align="center">Кнопочка</div></div>
+<div class="tr2"><div class="but2 button" , align="center">Кнопочка</div></div>
 </body>
 </html>
