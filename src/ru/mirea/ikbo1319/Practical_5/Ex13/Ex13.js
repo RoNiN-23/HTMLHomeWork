@@ -1,12 +1,13 @@
 let num = 2;
 let result;
 switch (num) {
-    case 1:alert("Зима");
+    case 1:result = "Зима";
         break;
-    case 2:alert("Весна");
+    case 2:result = "Весна";
         break;
-    case 3:alert("Лето");
+    case 3:result = "Лето";
         break;
-    case 4:alert("Осень");
+    case 4:result = "Осень";
         break;
 }
+alert(result);
