@@ -5,6 +5,7 @@ for (let i = 0; i < mass.length; i++) {
     document.writeln(mass[i]);
 }
 //Задача 15.2
+document.writeln("<br>");
 document.writeln("Задача 15.2" + "<br>");
 let result = 0;
 for (let i = 0; i < mass.length; i++) {
