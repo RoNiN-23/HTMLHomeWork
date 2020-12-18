@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.1</title>
+</head>
+<body>
+<input type="submit" onmouseover="foo()" value="Наведи на меня">
+<input type="submit" onclick="doubleClick()" value="Нажми на меня дважды">
+<script>
+    //Ex1.1
+    function foo() {
+        alert("Окно при наведении");
+    }
+
+    //Ex1.2
+    let i = 0;
+
+    function doubleClick() {
+        i++;
+        if (i === 2) {
+            alert("Окно при двух кликах");
+            i = 0;
+        }
+    }
+</script>
+</body>
+</html>

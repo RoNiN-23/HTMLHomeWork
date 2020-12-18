@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.6</title>
+</head>
+<body>
+<span>Ex6.1</span>
+<p>Абзац 1</p>
+<p>Абзац 2</p>
+<p>Абзац 3</p>
+<input type="submit" onclick="ex1()" value="Кнопка1">
+<br>
+<br>
+<span>Ex6.2</span>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<input type="submit" onclick="ex2()" value="Кнопка2">
+<script>
+    //Ex6.1
+    function ex1() {
+        let el = document.getElementsByTagName('p');
+        for (let i = 0; i < el.length - 1; i++) {
+            el[i].innerHTML = 'Поменялся';
+        }
+    }
+
+    //Ex6.2
+    function ex2() {
+        let elem = document.getElementsByTagName('p');
+        for (let i = 0; i < elem.length; i++) {
+            elem[i].innerHTML = i + '.' + elem[i].innerHTML;
+        }
+    }
+</script>
+</body>
+</html>

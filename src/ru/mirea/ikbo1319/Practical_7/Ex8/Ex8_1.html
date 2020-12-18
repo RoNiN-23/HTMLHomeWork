@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>7.8.1</title>
+    <style>
+        #elem {
+            width: 250px;
+            height: 300px;
+            border: 5px solid black;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="elem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis dolores expedita inventore
+    ipsam iure labore, modi numquam pariatur perferendis quo, ut. Est voluptates, voluptatum? Adipisci, laudantium magni
+    numquam quis repellendus voluptas? Dicta dignissimos inventore modi molestias, necessitatibus neque obcaecati odit
+    omnis placeat praesentium quaerat quos ratione repellat repudiandae sunt tenetur veritatis? Alias animi beatae
+    dolorem doloremque ea laborum pariatur perferendis qui quia repudiandae saepe, vitae! Alias asperiores aut
+    blanditiis corporis cum dicta dolore explicabo illum in, iusto laudantium magni nesciunt perspiciatis quam quia
+    ratione rem sint tempora tempore ullam ut voluptas voluptatum. Architecto consequuntur culpa cum cumque, debitis
+    doloremque earum enim eos harum in itaque magni molestiae odit optio porro quis quos, repellendus unde voluptatem
+    voluptatum. Ab animi atque autem blanditiis cum deleniti deserunt ducimus eos esse ex, explicabo illo ipsum labore,
+    laborum magnam minus natus pariatur quo reiciendis rem repellendus, sapiente suscipit vero vitae voluptas! Ab
+    accusamus adipisci alias asperiores blanditiis cumque dolor dolore doloremque eius facilis fugit illum iusto libero
+    magnam necessitatibus neque nulla obcaecati omnis, pariatur placeat possimus quasi ratione rem repellat repellendus
+    sed suscipit velit. Cumque delectus dolorum enim illum magnam magni maxime recusandae repudiandae sit vero. Amet aut
+    beatae maxime molestiae obcaecati perferendis voluptatem!
+</div>
+<br>
+<input type="submit" onclick="func()">
+
+<script>
+    function func() {
+        let elem = document.querySelector('#elem');
+        alert(elem.scrollTop);
+    }
+</script>
+</body>
+</html>

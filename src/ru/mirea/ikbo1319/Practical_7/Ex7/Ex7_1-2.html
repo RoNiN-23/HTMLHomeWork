@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.7</title>
+</head>
+<body>
+<p>Ex7.1</p>
+<span id="num">0</span>
+<p><input type="submit" onclick="ex1()" value="Запустить таймер"></p>
+<p>Ex7.2</p>
+<span id="testText">0</span>
+<input type="submit" value="Запустить"  onclick="go2()" id="go">
+<input type="submit" value="Остановить"  onclick="stop()"  id="stop" disabled>
+
+<script>
+    //Ex7.1
+    function ex1() {
+        window.setInterval(timer1, 1000);
+    }
+
+    function timer1() {
+        let str = document.getElementById('num');
+        str.innerHTML = parseInt(str.innerHTML) + 1;
+    }
+
+    //Ex7.2
+    function go2(){
+        window.timerId = window.setInterval(timer2, 1000);
+        document.getElementById('go').disabled = true;
+        document.getElementById('stop').disabled = false;
+    }
+    function stop(){
+        window.clearInterval(window.timerId);
+        document.getElementById('go').disabled = false;
+        document.getElementById('stop').disabled = true;
+    }
+    function timer2(){
+        let test = document.getElementById('testText');
+        test.innerHTML = parseInt(test.innerHTML)+1;
+    }
+</script>
+</body>
+</html>

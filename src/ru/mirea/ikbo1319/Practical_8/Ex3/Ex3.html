@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>8.3</title>
+    <script>
+        function animate(options) {
+            let start = performance.now();
+            requestAnimationFrame(function animate(time) {
+                let timeFraction = (time - start) / options.duration;
+                if (timeFraction > 1) timeFraction = 1;
+                let progress = options.timing(timeFraction)
+                options.draw(progress);
+                if (timeFraction < 1) {
+                    requestAnimationFrame(animate);}
+            });
+        }</script>
+    <style>
+        #field
+        {
+            height: 200px;
+            border-bottom: 1px yellow groove;
+            position: relative;
+        }
+        #ball {
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="field">
+    <img src="https://bbrlawpc.com/wp-content/uploads/2016/03/basketball.png" width="40" height="40" id="ball">
+</div>
+<script>
+    function makeEaseOut(timing) {
+        return function(timeFraction) {
+            return 1 - timing(1 - timeFraction);
+        }
+    }
+    function bounce(timeFraction) {
+        for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+            if (timeFraction >= (7 - 4 * a) / 11) {
+                return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+            }
+        }
+    }
+    ball.onclick = function() {
+        let to = field.clientHeight - ball.clientHeight;
+        animate({
+            duration: 3000,
+            timing: makeEaseOut(bounce),
+            draw(progress) {
+                ball.style.top = to * progress + 'px'
+            }
+        });
+    };
+</script>
+</body>
+</html>

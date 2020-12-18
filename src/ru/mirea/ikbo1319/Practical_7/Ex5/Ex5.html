@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Ex5.1</p>
+<p id="testText1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, temporibus.</p>
+<input type="submit" onclick="ex1()" value="Кнопка1">
+<p>Ex5.2</p>
+<input type="text" value="" id="one">&nbsp;+&nbsp;<input type="text" value="" id="two">&nbsp;=&nbsp;<span
+        id="sum">0</span>
+<p><input type="submit" value="Нажмите чтобы сложить" onclick="ex2()"></p>
+<p>Ex5.3</p>
+<input type="text" value="" placeholder="Введите в меня текст" id="testText3" onkeyup="ex3()"><span id="result"></span>
+<p>Ex5.4</p>
+<div><p><a href="https://google.ru">Ссылка 1</a></p>
+    <p><a href="https://tut.by">Ссылка 2</a></p>
+    <p><a href="https://yandex.ru">Ссылка 3</a></p>
+    <input type="submit" onclick="ex4()" value="Нажми на меня">
+</div>
+
+
+<script>
+    //Ex5.1
+    function ex1() {
+        document.getElementById('testText1').style.fontWeight = '600';
+        document.getElementById('testText1').style.fontSize = '30px';
+    }
+    //5.2
+    function ex2() {
+        let num1 = document.getElementById('one').value;
+        let num2 = document.getElementById('two').value;
+        let sum = document.getElementById('sum');
+        sum.innerHTML = Number(num1) + Number(num2);
+    }
+    //5.3
+    function ex3() {
+        let str = document.getElementById('testText3').value;
+        result = document.getElementById('result');
+        result.innerHTML = ' ' + str;
+        document.getElementById('testText3').value = str;
+    }
+    //5.4
+    function ex4() {
+        let el = document.getElementsByTagName('a');
+        for (let i = 0; i < el.length; i++) {
+            el[i].innerHTML = el[i].innerHTML + '(' + el[i].getAttribute('href') + ')';
+        }
+    }
+</script>
+</body>
+</html>

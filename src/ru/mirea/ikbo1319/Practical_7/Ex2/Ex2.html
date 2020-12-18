@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.2</title>
+    <style>
+        input {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="Текст" id="testText">
+<input type="submit" value="Кнопка1" onclick="changeText()">
+<input type="image" id="testImg" src="img1.jpg">
+<input type="submit" value="Кнопка2" onclick="changeImg()">
+<script>
+    //Ex2.1
+    function changeText() {
+        let elem = document.getElementById('testText');
+        elem.value = 'Текст_2';
+    }
+
+    //Ex2.2
+    function changeImg() {
+        let elem = document.getElementById('testImg');
+        elem.src = 'img2.webp';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>8.2</title>
+    <script>function animate(options) {
+
+        let start = performance.now();
+
+        requestAnimationFrame(function animate(time) {
+            let timeFraction = (time - start) / options.duration;
+            if (timeFraction > 1) timeFraction = 1;
+
+            let progress = options.timing(timeFraction)
+
+            options.draw(progress);
+
+            if (timeFraction < 1) {
+                requestAnimationFrame(animate);
+            }
+
+        });
+    }</script>
+</head>
+<body>
+<textarea id="textExample" rows="5" cols="60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aperiam aut blanditiis commodi corporis, cum dicta distinctio dolores eligendi et eveniet ex fuga hic in incidunt ipsum laudantium libero maiores nam nemo nesciunt nulla officia qui quos repellat repudiandae similique sint sunt tenetur vel velit voluptas voluptatum? Doloribus, possimus.</textarea>
+<button onclick="animateText(textExample)">Старт</button>
+<script>
+    function animateText(textArea) {
+        let text = textArea.value;
+        let to = text.length,
+            from = 0;
+        animate({
+            duration: 5000,
+            timing: bounce,
+            draw: function (progress) {
+                let result = (to - from) * progress + from;
+                textArea.value = text.substr(0, Math.ceil(result))
+            }
+        });
+    }
+
+    function bounce(timeFraction) {
+        for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+            if (timeFraction >= (7 - 4 * a) / 11) {
+                return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+            }
+        }
+    }
+</script>
+</body>
+</html>

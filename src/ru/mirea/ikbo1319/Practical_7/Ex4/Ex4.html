@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.4</title>
+</head>
+<body>
+<p>Ex4.1</p>
+<input type="text" value="Это текст" id="TestText">
+<input type="submit" value="Кнопка" onclick="ex1()">
+<p>Ex4.2</p>
+<input type="text" value="Это текст к заданию 4.2" id="TestText2">
+<input type="submit" value="Исчезнуть" onclick="ex2_1()">
+<input type="submit" value="Вернуться" onclick="ex2_2()">
+<script>
+    //ex4.1
+    function ex1() {
+        document.getElementById('TestText').value = 'Новый текст';
+        document.getElementById('TestText').style.color = 'red';
+        document.getElementById('TestText').style.borderRadius = '3px';
+        document.getElementById('TestText').style.width = '300px';
+    }
+
+    //Ex4.2
+    function ex2_1() {
+        document.getElementById('TestText2').style.display = 'none';
+    }
+
+    function ex2_2() {
+        document.getElementById('TestText2').style.display = 'block';
+        document.getElementById('TestText2').style.float = 'left';
+    }
+</script>
+</body>
+</html>

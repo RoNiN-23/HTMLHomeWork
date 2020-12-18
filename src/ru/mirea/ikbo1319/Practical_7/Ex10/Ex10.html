@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>7.10</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 10px auto;
+            width: 470px;
+            color: white;
+        }
+
+        h3 {
+            margin: 0;
+            padding-bottom: .3em;
+            padding-right: 20px;
+            font-size: 1.1em;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 0 .5em;
+        }
+
+        .pane {
+            background: dimgrey;
+            padding: 10px 20px 10px;
+            border-top: solid 2px black;
+            position: relative;
+        }
+
+        .remove-button {
+            position: absolute;
+            font-size: 110%;
+            top: 0;
+            color: white;
+            right: 10px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <div class="pane">
+        <h3>ОДИН</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aut beatae doloremque doloribus illum
+            quas qui quisquam saepe sequi?</p>
+    </div>
+    <div class="pane">
+        <h3>ДВА</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus, impedit nobis non odit officiis
+            omnis quaerat quod recusandae rem ullam voluptates! Aut fuga in mollitia necessitatibus quia repellendus
+            sit?</p>
+    </div>
+    <div class="pane">
+        <h3>ТРИ</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus fugiat nemo, repudiandae ut veniam.
+            Ad aliquam animi at commodi dicta dolor doloribus dolorum earum eos error facere facilis impedit in ipsa
+            iusto maxime, molestias non nostrum odit placeat quas quidem quod recusandae repellat sint tenetur vel velit
+            vitae voluptates.</p>
+    </div>
+</div>
+
+
+<script>
+    let panes = document.querySelectorAll('.pane');
+
+    for (let pane of panes) {
+        pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+        pane.firstChild.onclick = () => pane.remove();
+    }
+</script>
+
+</body>
+</html>

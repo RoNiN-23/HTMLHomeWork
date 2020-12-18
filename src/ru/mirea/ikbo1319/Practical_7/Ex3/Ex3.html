@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.3</title>
+</head>
+<body>
+<p>Ex3.1</p>
+<input type="text" value="Нажми на меня!" onfocus="changeFirst(this)" onblur="rev(this)">
+<p>Ex3.2</p>
+<input type="submit" value="активна" onclick="func1()" id="one">
+<input type="submit" value="Нажми чтобы активировать кнопку" onclick="func2()" id="two">
+<p>Ex3.3</p>
+<input type="submit" value="0 - нажатий" onclick="ex3()" id="ex3">
+<script>
+    //Ex3.1
+    function changeFirst(elem) {
+        elem.value = 'Текст был изменен';
+    }
+
+    function rev(elem) {
+        elem.value = 'Нажми на меня!';
+    }
+
+    //Ex3.2
+    let i = 0;
+
+    function func1() {
+        if (i === 0) {
+            i++;
+            document.getElementById('one').value = 'неактивна';
+        }
+    }
+
+    function func2() {
+        if (i === 1) {
+            i--;
+            document.getElementById('one').value = 'активна';
+        }
+    }
+
+    //Ex3.3
+    let num = 0;
+
+    function ex3() {
+        num++;
+        document.getElementById('ex3').value = num + ' - нажатий';
+    }
+</script>
+</body>
+</html>

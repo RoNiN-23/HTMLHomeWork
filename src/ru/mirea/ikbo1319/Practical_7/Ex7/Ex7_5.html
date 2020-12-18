@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <img src="1.webp" id="img1">
+    <img src="2.webp" id="img2">
+    <img src="3.webp" id="img3">
+    <img src="4.webp" id="img4">
+    <img src="5.webp" id="img5">
+    <p>
+        <input type="submit" value="Start" onclick="go()" id="go">
+        <input type="submit" value="Stop" onclick="stop()" id="stop" disabled>
+    </p>
+</div>
+<script>
+    function go(){
+        window.timerId = window.setInterval(timer, 1000);
+        document.getElementById('go').disabled = true;
+    } 		function go(){
+        window.timerId = window.setInterval(timer, 1000);
+        document.getElementById('go').disabled = true;
+        document.getElementById('stop').disabled = false;
+    }
+    function stop(){
+        window.clearInterval(window.timerId);
+        document.getElementById('go').disabled = false;
+        document.getElementById('stop').disabled = true;
+    }
+    function timer(){
+        let img1 = document.getElementById('img1');
+        let img2 = document.getElementById('img2');
+        let img3 = document.getElementById('img3');
+        let img4 = document.getElementById('img4');
+        let img5 = document.getElementById('img5');
+        let tmp = img1.src;
+        img1.src = img2.src;
+        img2.src = img3.src;
+        img3.src = img4.src;
+        img4.src = img5.src;
+        img5.src = tmp;
+    }
+</script>
+</body>
+</html>

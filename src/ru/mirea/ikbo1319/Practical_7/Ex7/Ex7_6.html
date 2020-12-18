@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr,td,th{
+            border: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="go()">
+<div id="wrapper">
+    <p>
+        До полуночи осталось:
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" >
+        <tr>
+            <th>Часы</th>
+            <th>Минуты</th>
+            <th>Секунды</th>
+        </tr>
+        <tr>
+            <td id="hours"></td>
+            <td id="minutes"></td>
+            <td id="seconds"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function go(){
+        window.timerId = window.setInterval(timer, 1000);
+    }
+    function timer(){
+        let seconds = document.getElementById('seconds');
+        let minutes = document.getElementById('minutes');
+        let hours = document.getElementById('hours');
+        let now = new Date();
+        let midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0);
+        let diff =  Math.floor((midnight - now)/1000);
+        let hoursRemain   = Math.floor(diff/(60*60));
+        let minutesRemain = Math.floor((diff-hoursRemain*60*60)/60);
+        let secondsRemain = Math.floor(diff%60);
+        hours.innerHTML   = hoursRemain;
+        minutes.innerHTML = addZero(minutesRemain);
+        seconds.innerHTML = addZero(secondsRemain);
+    }
+    function addZero(num){
+        if(num <=9) return '0'+num;
+        else return num;
+    }
+</script>
+</body>
+</html>

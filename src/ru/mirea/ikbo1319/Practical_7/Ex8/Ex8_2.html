@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>7.8.2</title>
+    <style>
+        #elem {
+            width: 250px;
+            height: 300px;
+            border: 5px solid black;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="elem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum inventore ipsa maiores mollitia neque
+    nihil obcaecati. Ab alias architecto asperiores autem, corporis culpa debitis deleniti dignissimos distinctio dolor
+    doloremque, fuga harum id inventore laboriosam libero natus nihil, non praesentium quaerat quas repellendus
+    repudiandae tempora tempore ullam unde veniam. Aliquid autem dicta dolor eligendi enim explicabo facere, fuga harum
+    id illum in iste itaque magnam mollitia nihil obcaecati odit officiis possimus quaerat quia quibusdam ratione rem
+    repellat similique suscipit tenetur unde. Alias aliquid assumenda aut beatae consectetur cum cumque dolore
+    doloremque excepturi facilis, inventore iusto maxime nemo, nostrum possimus quaerat rem saepe sequi soluta tempora,
+    ullam ut voluptas voluptatem? Alias consequuntur cumque cupiditate earum esse facilis impedit ipsum itaque,
+    laudantium nam nihil nostrum officiis repudiandae, suscipit ullam veritatis voluptates. Amet cumque deleniti
+    dolorum, facilis incidunt molestiae officiis quae quisquam suscipit? Aperiam cumque delectus dicta doloremque nemo
+    officia sed? Alias assumenda excepturi exercitationem fugit pariatur quasi, repellendus? Ab amet, distinctio eos
+    exercitationem in iure molestias nisi nulla praesentium quam sunt vero? Aliquid at consectetur delectus dicta
+    doloribus dolorum eaque error eveniet facilis fugiat iste iure iusto maxime nemo nobis pariatur quam quidem
+    repudiandae sapiente, sit tempora tempore temporibus voluptas voluptates, voluptatibus? Deserunt.
+</div>
+<br>
+<input type="submit" onclick="scrollTo200px()" value="Прокрутить до позиции 200px сверху">
+<script>
+    function scrollTo200px() {
+        var elem = document.getElementById('elem');
+        elem.scrollTop = 200;
+    }
+</script>
+</body>
+</html>
